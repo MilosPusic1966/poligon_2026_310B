@@ -18,8 +18,13 @@ namespace poligon_2026_310B
             vektor AB = new vektor(A, B);
             AB.stampaj();
             */
-            poligon prvi = poligon.unos();
+            /*poligon prvi = poligon.unos();
             prvi.stampa();
+            prvi.snimi();
+            */
+            poligon drugi = poligon.ucitaj();
+            drugi.stampa();
+
         }
     }
 }

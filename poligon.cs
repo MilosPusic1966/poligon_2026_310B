@@ -48,10 +48,21 @@ namespace poligon_2026_310B
                 izlaz.WriteLine(teme[i].x);
                 izlaz.WriteLine(teme[i].y);
             }
+            izlaz.Close();
         }
         static public poligon ucitaj()
         {
-            return null;
+            StreamReader ulaz = new StreamReader("poligon.txt");
+            int br = Convert.ToInt32(ulaz.ReadLine());
+            poligon novi = new poligon(br);
+            for (int i = 0; i < br; i++)
+            {
+                double x = Convert.ToDouble(ulaz.ReadLine());
+                double y = Convert.ToDouble(ulaz.ReadLine());
+                novi.teme[i] = new tacka(x, y);
+            }
+            ulaz.Close();
+            return novi;
         }
 
     }
