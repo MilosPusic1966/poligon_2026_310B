@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace poligon_2026_310B
 {
@@ -37,6 +38,20 @@ namespace poligon_2026_310B
             {
                 Console.WriteLine("x={0} y={1}", teme[i].x, teme[i].y);
             }
+        }
+        public void snimi()
+        {
+            StreamWriter izlaz = new StreamWriter("poligon.txt");
+            izlaz.WriteLine(br_temena);
+            for (int i = 0; i < br_temena; i++)
+            {
+                izlaz.WriteLine(teme[i].x);
+                izlaz.WriteLine(teme[i].y);
+            }
+        }
+        static public poligon ucitaj()
+        {
+            return null;
         }
 
     }
