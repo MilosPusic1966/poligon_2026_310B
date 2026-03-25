@@ -64,6 +64,9 @@ namespace poligon_2026_310B
             ulaz.Close();
             return novi;
         }
-
+        public double obim()
+        {
+            return 0;
+        }
     }
 }

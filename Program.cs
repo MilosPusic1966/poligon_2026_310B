@@ -24,7 +24,6 @@ namespace poligon_2026_310B
             */
             poligon drugi = poligon.ucitaj();
             drugi.stampa();
-
         }
     }
 }
