@@ -66,7 +66,16 @@ namespace poligon_2026_310B
         }
         public double obim()
         {
-            return 0;
+            vektor a;
+            double obim = 0;
+            for (int i = 0; i < br_temena - 1; i++)
+            {
+                a = new vektor(teme[i], teme[i + 1]);
+                obim += a.duzina();
+            }
+            a = new vektor(teme[br_temena - 1], teme[0]);
+            obim += a.duzina();
+            return obim;
         }
     }
 }

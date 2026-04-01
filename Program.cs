@@ -22,8 +22,15 @@ namespace poligon_2026_310B
             prvi.stampa();
             prvi.snimi();
             */
-            poligon drugi = poligon.ucitaj();
-            drugi.stampa();
+            // poligon drugi = poligon.ucitaj();
+            // drugi.stampa();
+            tacka A = new tacka(1, 1);
+            tacka B = new tacka(5, 1);
+            tacka C = new tacka(2, 0.1);
+            tacka D = new tacka(2, 0);
+            vektor AB = new vektor(A, B);
+            vektor CD = new vektor(C, D);
+            Console.WriteLine(AB.sece(CD));
         }
     }
 }
