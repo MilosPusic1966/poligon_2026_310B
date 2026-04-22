@@ -88,6 +88,10 @@ namespace poligon_2026_310B
             }
             vektor[] stranica = new vektor[br_temena];
             // napravim stranice
+            for (int i = 0; i < br_temena; i++)
+            {
+                stranica[i] = new vektor(teme[i], teme[(i + 1) % br_temena]);
+            }
             for (int i = 0; i < br_temena-2; i++)
             {
                 int kraj = br_temena;
