@@ -41,8 +41,8 @@ namespace poligon_2026_310B
             */
             tacka A = new tacka(1, 3);
             tacka B = new tacka(1, 1);
-            tacka C = new tacka(4, 0);
-            tacka D = new tacka(3, 3);
+            tacka C = new tacka(5, 1);
+            tacka D = new tacka(5, 3);
             vektor ab = new vektor(A, B);
             vektor bc = new vektor(B, C);
             vektor cd = new vektor(C, D);
@@ -63,11 +63,28 @@ namespace poligon_2026_310B
             // pravougaonik:
             // ab = cd, bc = da
             // ab L bc
-
+            if ((ab_len == cd_len) && (bc_len==da_len))
+            {
+                if (vektor.SP(ab, bc) == 0)
+                {
+                    Console.WriteLine("jeste pravougaonik");
+                }
+                else Console.WriteLine("nije pravougaonik");
+            }
+            else Console.WriteLine("nije pravougaonik");
             // deltoid:
-            // ab = ad & bc = cd
+            // ab = da & bc = cd
             // ab = bc & cd = da
-
+            if ((ab_len == da_len)&& (bc_len == cd_len))
+            {
+                Console.WriteLine("jeste deltoid: ab=da");
+            }
+            else
+            if ((ab_len == bc_len) && (cd_len==da_len))
+            {
+                Console.WriteLine("Jeste deltoid AB=BC");
+            }
+            else Console.WriteLine("nije deltoid"); ;
         }
     }
 }
