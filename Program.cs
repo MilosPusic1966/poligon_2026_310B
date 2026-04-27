@@ -39,10 +39,10 @@ namespace poligon_2026_310B
                Console.WriteLine(prvi.povrsina());
             else Console.WriteLine("nije prost");
             */
-            tacka A = new tacka(1, 3);
-            tacka B = new tacka(1, 1);
-            tacka C = new tacka(5, 1);
-            tacka D = new tacka(5, 3);
+            tacka A = new tacka(1, 1);
+            tacka B = new tacka(5, 1);
+            tacka C = new tacka(3, 3);
+            tacka D = new tacka(1, 3);
             vektor ab = new vektor(A, B);
             vektor bc = new vektor(B, C);
             vektor cd = new vektor(C, D);
@@ -84,7 +84,19 @@ namespace poligon_2026_310B
             {
                 Console.WriteLine("Jeste deltoid AB=BC");
             }
-            else Console.WriteLine("nije deltoid"); ;
+            else Console.WriteLine("nije deltoid");
+            // trapez
+            double ug_a = vektor.SP(da, ab);
+            double ug_b = vektor.SP(ab, bc);
+            double ug_c = vektor.SP(bc, cd);
+            double ug_d = vektor.SP(cd, da);
+            bool jeste = false;
+            if ((ug_a == 0) && (ug_b == 0)) jeste = true;
+            else if ((ug_b == 0) && (ug_c == 0)) jeste = true;
+            else if ((ug_c == 0) && (ug_d == 0)) jeste = true;
+            else if ((ug_d == 0) && (ug_a == 0)) jeste = true;
+            if (jeste) Console.WriteLine("jeste trapez");
+            else Console.WriteLine("Nije trapez");
         }
     }
 }
